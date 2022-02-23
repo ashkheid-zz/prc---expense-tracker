@@ -14,43 +14,41 @@ const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (event) => {
-    /*
+    /* another way to update state
     setUserInput((prevState) => {
       return {
         ...prevState,
         enteredTitle: event.target.value,
       };
     });
-*/
+    */
 
     setUserInput((prevState) => {
       return Object.assign(prevState, { enteredTitle: event.target.value });
     });
-
-    console.log(userInput.enteredTitle);
   };
 
   const amountChangeHandler = (event) => {
     setUserInput((prevState) => {
-      return {
-        ...prevState,
-        enteredAmount: event.target.value,
-      };
+      return Object.assign(prevState, { enteredAmount: event.target.value });
     });
   };
 
   const dateChangeHandler = (event) => {
     setUserInput((prevState) => {
-      return {
-        ...prevState,
-        enteredDate: event.target.value,
-      };
+      return Object.assign(prevState, { enteredDate: event.target.value });
     });
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log('SUB');
+    const expenseData = {
+      title: userInput.enteredTitle,
+      amount: userInput.enteredAmount,
+      date: new Date(userInput.enteredDate)
+    }
+    
+    console.log(expenseData);
   };
 
   return (
