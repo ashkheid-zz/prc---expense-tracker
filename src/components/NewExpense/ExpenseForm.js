@@ -14,7 +14,7 @@ const ExpenseForm = () => {
   });
 
   const titleChangeHandler = (event) => {
-/*
+    /*
     setUserInput((prevState) => {
       return {
         ...prevState,
@@ -26,7 +26,6 @@ const ExpenseForm = () => {
     setUserInput((prevState) => {
       return Object.assign(prevState, { enteredTitle: event.target.value });
     });
-
 
     console.log(userInput.enteredTitle);
   };
@@ -49,8 +48,13 @@ const ExpenseForm = () => {
     });
   };
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+    console.log('SUB');
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
