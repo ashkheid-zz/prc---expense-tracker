@@ -6,3 +6,4 @@ description: >-
 
 # 💰 Expense Tracker
 
+read trough this good looking doc
