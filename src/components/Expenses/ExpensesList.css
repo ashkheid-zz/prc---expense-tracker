@@ -4,6 +4,11 @@
 }
 
 .expenses-list__fallback {
-  color: white;
+  color: hsl(0deg 100% 70%);
+  background-color: hsl(0deg 100% 30% / 20%);
   text-align: center;
+  border: 1px solid;
+  padding-block: 1em;
+  margin-inline: 1em;
+  border-radius: 0.25em;
 }
